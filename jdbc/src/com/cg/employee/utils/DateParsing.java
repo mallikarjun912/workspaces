@@ -1,4 +1,4 @@
-package com.cg.employee.dao;
+package com.cg.employee.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
