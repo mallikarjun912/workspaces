@@ -5,22 +5,20 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class EmployeeMain {
+public class EmployeeCrud {
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("cgjpa");
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
 		
-		Employee emp = new Employee();
-		emp.setEmpcode(102);
-		emp.setEmpname("abcd");
-		emp.setSalary(5500); 
-		
+		Employee emp = manager.find(Employee.class,102);
+		System.out.println(emp.getEmpcode()+emp.getEmpname()+emp.getSalary()); 
 		transaction.begin();
-		manager.persist(emp);
+		emp.setSalary(7500);
+		//manager.persist(emp);
+		manager.remove(emp); 
 		transaction.commit();
 		manager.close();
-		
-		
 	}
+
 }
