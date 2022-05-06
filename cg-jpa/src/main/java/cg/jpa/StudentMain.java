@@ -1,27 +1,24 @@
 package cg.jpa;
 
-import java.util.Date;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class EmployeeMain {
+public class StudentMain {
+
 	public static void main(String[] args) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("cgjpa");
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
+		Student std = new Student();
+		std.setStudentName("aa");
 		
-		Employee emp = new Employee();
-		emp.setEmpname("xyz");
-		emp.setSalary(5500); 
-		emp.setDob(new Date());
 		transaction.begin();
-		manager.persist(emp);
+		manager.persist(std);
 		transaction.commit();
 		manager.close();
-		
-		
+
 	}
+
 }
