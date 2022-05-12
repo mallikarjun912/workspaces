@@ -11,11 +11,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 	EmployeeDao dao = new EmployeeDaoImpl();
 	
 	@Override
-	public int addEmployee(Employee emp) {
+	public int addEmployee(Employee emp)  {
 		int rows = dao.addEmployee(emp);
 		return rows;
-	}
-
+	} 
+ 
 	@Override
 	public int updatEmployee(Employee emp) {
 		int rows = dao.updateEmployee(emp);

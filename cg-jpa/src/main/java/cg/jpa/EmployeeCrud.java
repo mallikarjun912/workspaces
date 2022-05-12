@@ -15,7 +15,7 @@ public class EmployeeCrud {
 		System.out.println(emp.getEmpcode()+emp.getEmpname()+emp.getSalary()); 
 		transaction.begin();
 		emp.setSalary(7500);
-		//manager.persist(emp);
+		manager.persist(emp);
 		manager.remove(emp); 
 		transaction.commit();
 		manager.close();

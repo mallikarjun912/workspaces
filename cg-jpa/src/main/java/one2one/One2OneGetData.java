@@ -10,11 +10,14 @@ public class One2OneGetData {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("cgjpa");
 		EntityManager manager = factory.createEntityManager();
 		
-		Passport passport = manager.find(Passport.class, "G123765");
-		System.out.println(passport.getPassportNo()+passport.getDateIssued()+
-				passport.getExpiryDate()+" "+passport.getPerson().getPersonId()+
+		Passport passport = manager.find(Passport.class, "A223344");
+		System.out.println(passport.getPassportNo()+" "+passport.getDateIssued()+
+				passport.getExpiryDate()+" "+passport.getPerson().getPersonId()+" "+
 				passport.getPerson().getPersonName());
 		
+		Person person = manager.find(Person.class,1);
+		System.out.println(person.getPersonId()+" "+person.getPersonName()+" "+
+				person.getPassport().getPassportNo()); 
 	}
 
 }

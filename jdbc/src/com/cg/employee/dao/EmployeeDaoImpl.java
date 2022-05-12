@@ -18,10 +18,10 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	private ResultSet rs;
 	
 	@Override
-	public int addEmployee(Employee emp) {
+	public int addEmployee(Employee emp)  {
 		conn = DatabaseConnection.openConnection();
 		int rows=0;
-		try {
+		try {  
 			pst = conn.prepareStatement(EmployeeDBQueries.ADDEMP);
 			pst.setInt(1, emp.getEmpcode());
 			pst.setString(2, emp.getEmpname());
