@@ -10,16 +10,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "customer")
+//@Entity
+//@Table(name = "customer")
 public class Customer {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private int slno;
 	@Column(length = 30)
 	private String custname;
-	@ElementCollection
-	@Column
+	//@ElementCollection
+//	@Column
 	private List<String> mobileno;
 	public int getSlno() {
 		return slno;

@@ -21,7 +21,7 @@ public class CustomerMain {
 		cust.setCustname("xyz");
 		cust.setMobileno(mobiles); 
 		transaction.begin();
-		manager.persist(cust); 
+		//manager.persist(cust); 
 		transaction.commit();
 	}
 
