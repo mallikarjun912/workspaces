@@ -1,5 +1,7 @@
 package cg.jpa;
 
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -15,6 +17,7 @@ public class EmployeeCrud {
 		System.out.println(emp.getEmpcode()+emp.getEmpname()+emp.getSalary()); 
 		transaction.begin();
 		emp.setSalary(7500);
+		emp.setDob(new Date()); 
 		manager.persist(emp);
 		manager.remove(emp); 
 		transaction.commit();
