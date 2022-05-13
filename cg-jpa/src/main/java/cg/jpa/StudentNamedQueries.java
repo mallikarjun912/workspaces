@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import cg.jpa.entities.Student;
+
 public class StudentNamedQueries {
 
 	public static void main(String[] args) {

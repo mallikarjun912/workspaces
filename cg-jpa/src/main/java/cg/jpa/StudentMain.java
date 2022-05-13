@@ -5,6 +5,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import cg.jpa.entities.Student;
+
 public class StudentMain {
 
 	public static void main(String[] args) {
