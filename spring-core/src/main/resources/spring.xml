@@ -13,4 +13,20 @@
      <!--  	<property name="code" value="456"></property>
       	<property name="empname" value="cap-gemini"></property>  -->
      </bean>
+     <bean id="cust" class="spring.core.Customer" scope="prototype">  
+     	<property name="code" value="1234"></property>
+     	<property name="custname" value="capgemini"></property>
+     	<property name="commn" value="5500"></property>  
+     </bean>
+     
+     <bean id="student" class="spring.core.Student" autowire="byType"> 
+     	<property name="rno" value="1234"></property>
+     	<property name="stdname" value="James"></property>
+     	<property name="group" value="CSE"></property>
+     	<!-- <property name="address" ref="addr"></property> --> <!-- manual wiring -->
+     </bean>
+     <bean id="addr" class="spring.core.Address">
+     	<property name="street" value="Hi-Tech City"></property>
+     	<property name="city" value="Hyderabad"></property>  
+     </bean>
 </beans>
