@@ -3,6 +3,11 @@ package spring.core;
 public class Employee {
 	private int code;
 	private String empname;
+
+	public Employee(int code, String empname) {
+		this.code = code;
+		this.empname = empname;
+	}
 	public int getCode() {
 		return code;
 	}
